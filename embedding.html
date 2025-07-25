@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
+  <head>
 
 <head>
-  <title>Project Title</title>
+
+  <title>BLIND AID (VERSION 4)</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
@@ -13,20 +15,71 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
   <style>
-    .menu-embedding {
+    .menu-index {
       color: rgb(255, 255, 255) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
   </style>
+
+</head>
 </head>
 
-<body class="force-no-scroll">
+<body>
   <div class="menu-container"></div>
-  <div class="iframe-container">
-    <iframe class="iframe" src="https://yenchiah.me/geo-heatmap/GeoHeatmap.html"></iframe>
-  </div>
-</body>
+  <div class="content-container">
+    <!-------------------------------------------------------------------------------------------->
+    
+    <!-------------------------------------------------------------------------------------------->
+    <div class="content">
+      <div class="content-table flex-column">
+  <!--Start Text Only-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h1 id="text-only">CODE IMPLEMENTATION</h1>
+            <hr>
+            <p class="text">
+              <h2>Summary</h2>
+              <P>The HC-SR04 will be used to detect objects greater than 2 meters away, the distance data it returns will be used also to calculate the incoming object's speed by measuring change in distance over time. The MPU6050's temperature sensor will provide temperature data to refine the speed calculations made using the HC-SR04's data. At distances of 2 meters or less, use the VL53L0X to perform distance calculations and utilize its data to calculate object speed. If the VL53L0X encounters an error or the object is out of range, fall back to the HC-SR04. In both cases, the relative speed of the object in the person's path (30 FOV) will be calculated, using the MPU6050 to get the wearer's speed to make the calculation. The vibration motor will have two types of vibration queues: pulses to indicate the incoming object's speed using the relative speed calculations, and vibration strength to convey proximity. If the object is stationary, convey this through a continuous vibration that grows stronger with proximity. The faster the object, the faster the pulses, the closer the object, the stronger the vibrations. Once a drastic change in angular acceleration, tilt and speed is detected over a small time window, identify this as a potential fall. Trigger the SIM800L to send an SMS alert to the wearer's caretaker to alert them of the fall. Send any object proximity data if available to give context to whether the fall was on their own accord, or as aresult of a collision with an object.</p>
+          </div>
+        </div>
+        <!--End Text with Buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Images and Image buttons-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h1 id="images-and-image-button">Setup</h1>
+            <hr>
+          <div class="flex-item flex-column">
+ 
 
+            <a href="https://github.com/CS-GROUP39/blind_aid?tab=readme-ov-file" target="_blank" class="image max-width-400">
+             <p> <img src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/IMG_20250718_220127_388.jpg?raw=true" alt="Blind Aid Version 4 prototype device"></p>
+            </a>
+           
+          </div>
+        </div>
+  
+        <!-------------------------------------------------------------------------------------------->
+    
+        <!-------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="banner">
+        <div class="banner-table flex-column">
+          <div class="flex-row">
+            <div class="flex-item flex-column">
+              <h2>Blind Aid Project</h2>
+              <p class="text add-bottom-margin-large">
+                Developed by Kawuma Rodney, Twebaza Rodlin, Muganzi Baker Kasirye, Mukisa Mark, and Kyomuhendo Sumayah at Makerere University. Contact us at <a href="mailto:blindaid@mak.ac.ug" aria-label="Email the Blind Aid team">blindaid@mak.ac.ug</a>. Visit our project repository for more details: <a href="https://github.com/CS-GROUP39/blind_aid" aria-label="Visit Blind Aid project repository">Blind Aid Repository</a>. Follow us on <a href="https://x.com" aria-label="Follow Blind Aid on X">X</a> for updates. © 2025 Blind Aid Team, Makerere University.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
 </html>
