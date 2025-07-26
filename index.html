@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>BLIND AID (VERSION 4)</title>
+  <title>BLIND AID</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
@@ -50,9 +50,9 @@
       <div class="banner-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <h2 class="add-top-margin-small">Blind Aid Version 4</h2>
+            <h2 class="add-top-margin-small">Blind Aid</h2>
             <p class="text">
-              A wearable device designed to assist visually impaired individuals in navigating their surroundings safely using real-time sensor feedback and haptic alerts.
+              A wearable device designed to assist the visually impaired individuals in navigating their surroundings safely using real-time sensor feedback and haptic alert queues.
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@
      
     <div class="flex-item flex-column">
  
-        <h2>Problem Statement</h2>
+        <h2>PROBLEM STATEMENT</h2>
         <p>
           Individuals with visual impairments often face significant challenges in independently navigating their environments. 
           While some assistive technologies exist, they tend to offer limited feedback about dynamic surroundings and often 
@@ -76,20 +76,21 @@
     </div>
 
     <div class="flex-item flex-column">
-        <h2>Solution</h2>
+        <h2>SOLUTION</h2>
         <p>
           We propose the development of a wearable assistive device that can be easily attached to an individual's clothing. 
           Utilizing a combination of proximity and motion sensors, the device will detect obstacles in real-time and provide 
-          tactile or auditory feedback to the user. It will also assess the relative speed and distance of approaching obstacles, 
+          tactile feedback to the user. It will also assess the relative speed and distance of approaching obstacles, 
           enabling the user to react accordingly. This system aims to enhance spatial awareness and mobility, empowering visually 
           impaired individuals with greater independence and safety in their daily lives.
         </p>
     </div>
 
     <div class="content">
+      <h2><strong>Team Members:</strong></h2>
+      <hr>
       <div class="content-table flex-column">
         <!-- Start Intro -->
-        <h2><strong>Team Members:</strong></h2>
 
         <div class="flex-row">
           <div class="flex-item flex-column">
@@ -117,124 +118,81 @@
           </div>
         </div>
         <!-- End Intro -->
-        <!-- Start Components and Their Roles -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="components-and-their-roles"><strong>Components and their roles:</strong></h2>
-            <hr>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="img/Adruino.png" alt="Arduino Uno microcontroller">
-            <p class="image-caption"><strong>Arduino Uno</strong></p>
-            <p class="text">
-              The Arduino Uno serves as the central microcontroller, acting as the brain of the Blind Aid system. It processes real-time data from multiple sensors, including the HC-SR04 and VL53L0X, to detect obstacles and environmental changes. The ATmega328P chip provides 32KB of flash memory and 14 digital I/O pins, enabling efficient control of outputs like the vibration motor. Its low power consumption and versatility make it ideal for wearable applications.
-            </p>
-          </div>
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/HC-SR04.jpeg?raw=true" alt="HC-SR04 Ultrasonic Distance Sensor">
-            <p class="image-caption"><strong>Ultrasonic Distance Sensor (HC-SR04)</strong></p>
-            <p class="text">
-              The HC-SR04 ultrasonic sensor measures distances from 2cm to 4m using sound waves, providing a broad view of the environment. It emits ultrasonic pulses and calculates distance based on the time taken for the echo to return. This sensor is crucial for detecting larger obstacles in the user’s path. Its low cost and wide range make it a reliable choice for initial proximity detection.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/TOF.jpeg?raw=true" alt="VL53L0X Time of Flight Sensor">
-            <p class="image-caption"><strong>Time of Flight Sensor (VL53L0X)</strong></p>
-            <p class="text">
-              The VL53L0X Time of Flight sensor offers high-precision distance measurements up to 2m, excelling in close-range detection. It uses laser-based technology to detect soft surfaces and narrow objects that the HC-SR04 might miss. Its I2C interface ensures fast data communication with the Arduino Uno. This sensor enhances the system’s ability to provide accurate feedback in complex environments.
-            </p>
-          </div>
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/VBMotor.jpeg?raw=true" alt="PWM Vibration Motor Module">
-            <p class="image-caption"><strong>PWM Vibration Motor Module</strong></p>
-            <p class="text">
-              The PWM vibration motor delivers haptic feedback to alert users of obstacles, varying in strength and frequency based on proximity. Controlled via pulse-width modulation (PWM) from the Arduino, it provides intuitive, non-intrusive cues. The motor’s compact size ensures it fits comfortably in the wearable design. Its adjustable intensity helps convey distance and urgency effectively.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/MPU.jpeg?raw=true" alt="MPU6050 Gyroscope and Accelerometer">
-            <p class="image-caption"><strong>MPU6050 (Gyroscope and Accelerometer)</strong></p>
-            <p class="text">
-              The MPU6050 combines a 3-axis gyroscope and accelerometer to detect orientation and angular velocity, critical for fall detection. It also includes a temperature sensor to adjust HC-SR04 distance calculations for environmental variations. The sensor communicates via I2C, integrating seamlessly with the Arduino. Its high sensitivity ensures accurate detection of sudden movements or falls.
-            </p>
-          </div>
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/SIM800L.jpeg?raw=true" alt="SIM800L EVB Module">
-            <p class="image-caption"><strong>SIM800L EVB</strong></p>
-            <p class="text">
-              The SIM800L EVB module enables GSM communication to send SMS alerts to caregivers when a fall is detected. It includes proximity data in alerts, providing context for emergencies. The module supports quad-band GSM/GPRS, ensuring reliable connectivity. Its compact design and low power requirements make it suitable for the Blind Aid’s portable system.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/battery.jpeg?raw=true" alt="2000mAh Li-Po Battery">
-            <p class="image-caption"><strong>Li-Po Battery (2000mAh)</strong></p>
-            <p class="text">
-              The 2000mAh Li-Po battery provides portable, high-capacity power for the Blind Aid, ensuring extended operation. Its lightweight design is ideal for wearable applications, minimizing user discomfort. The battery supports stable 3.7V output, compatible with the system’s components. It is rechargeable via the TP4056 module for sustained use.
-            </p>
-          </div>
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/charger.jpeg?raw=true" alt="TP4056 Charging Module">
-            <p class="image-caption"><strong>TP4056 Charging Module</strong></p>
-            <p class="text">
-              The TP4056 module enables safe and efficient charging of the Li-Po battery via micro-USB or USB-C. It provides overcharge and over-discharge protection, extending battery life. The module outputs a stable 3.7V to power the system’s components. Its compact size integrates seamlessly into the wearable design.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/boost%20converter.jpeg?raw=true" alt="MT3608 DC-DC Boost Converter">
-            <p class="image-caption"><strong>MT3608 DC-DC Boost Converter</strong></p>
-            <p class="text">
-              The MT3608 boost converter steps up the Li-Po battery’s 3.7V to 6V, ensuring stable power for the Arduino and sensors. It supports high efficiency, minimizing energy loss in the wearable system. The adjustable output allows precise voltage tuning for component compatibility. Its small footprint makes it ideal for compact designs.
-            </p>
-          </div>
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="img/download.jpeg" alt="P-Channel MOSFET IRF9540N and Push Button">
-            <p class="image-caption"><strong>P-Channel MOSFET (IRF9540N) + Push Button</strong></p>
-            <p class="text">
-              The P-Channel MOSFET (IRF9540N) and push button enable efficient power management by controlling the system’s on/off state. The MOSFET acts as a switch, reducing power consumption when the device is idle. The push button provides user-friendly manual control. This setup enhances battery life and system reliability.
-            </p>
-          </div>
-        </div>
-        <!-- End Components and Their Roles -->
-        <!-- Start Prototype -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="prototype"><strong>Prototype Overview</strong></h2>
-            <hr>
-            <p class="text">
-              The Blind Aid Version 4 prototype integrates all components into a compact, wearable device, providing real-time navigation assistance through haptic and audio feedback.
-            </p>
-            <img class="image center max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/IMG_20250718_220127_388.jpg?raw=true" alt="Blind Aid Version 4 prototype device">
-            <p class="image-caption"><strong>Blind Aid Prototype</strong></p>
-          </div>
-        </div>
-        <div class="flex-item flex-column">
- 
-          <h2><strong>Prototype Capabilities</strong></h2>
-          <p>
-            -30° wide field of view directly in front of the wearer
-            - Broad object detection, speed and distance calculations at distances from 2-400cm
-            - Temperature and subject speed readings for more accurate data
-            - Fall detection 
-            - SMS alerts Incase of a fall
-            - Vibration queues to convey object proximity and speed
+    </div>
+    <div class="flex-item flex-column">
 
-          </p>
-          <p>
-              We believe that people with visual impairments deserve the freedom to move safely and independently, with greater 
-              control over their immediate environment.
-          </p>
+      <h2>SYSTEM OVERVIEW</h2>
+      <hr>
+      <img class="image center" src="/img/schematic.png"></img>
+      <h3>Core Components</h3>
+      <p>
+        A few key componebts that make up our system include:
+      </p>
+      <ul>
+        <li>Arduino Uno</li>
+        <li>HC-SR04 Ultrasonic Distance Sensor</li>
+        <li>VL53L0X Time of Flight Sensor</li>
+        <li>PWM Vibration Motor Module</li>
+        <li>MPU6050 Gyroscope and Accelerometer</li>
+        <li>SIM800L EVB Module for SMS alerts</li>
+        <li>Lithium Ion Battery for power supply</li>
+      </ul>
+    </div>
+      
+    <!-- Start Prototype -->
+    <div class="flex-row">
+      <div class="flex-item flex-column">
+        <h2 id="prototype"><strong>PROTOTYPE OVERVIEW</strong></h2>
+        <hr>
+        <img class="image center max-width-400" src="https://github.com/CS-GROUP39/blind_aid/blob/main/public/IMG_20250718_220127_388.jpg?raw=true" alt="Blind Aid Version 4 prototype device">
+        <p class="image-caption"><strong>Blind Aid Prototype</strong></p>
       </div>
-        <!-- End Prototype -->
+    </div>
+    <div class="flex-item flex-column">
+
+      <h2><strong>Prototype Capabilities</strong></h2>
+      <ul>
+        <li>Object detection over a 30 degree field of view</li>
+        <li>Complementary sensor system for accurate proximity and speed data at both close and long range</li>
+        <li>Wearer speed and orientation tracking for purposes of fall detection and calculating relative speed</li>
+        <li>An array of vibration queues to convey incoming object speed and proximity</li>
+        <li>SMS Alerts to a victim's caretaker in the event that a fall has been detected.</li>
+      </ul>
+      <h2>Protoype Limitations</h2>
+      <p>
+        While developing our protoype, we encountered a number of limitations and hurdles that made the development process challenging.
+      </p>
+      <ul>
+        <li>Narrow field of view, thus limited multidirectional object detection</li>
+        <li>Limited sensor range of just over 400 centimetres</li>
+        <li>Constant and accurate calibration of the gyroscope for accurate results</li>
+        <li>Small and ineffiecient power supply</li>
+        <li>SIM800L calibration and integration</li>
+      </ul>
+    </div>
+
+    <div class="flex-item flex-column">
+      <h2>FUTURE UPGRADES</h2>
+      <hr>
+      <p>
+        With more funding and access to more resources, we have a few system upgrades in mind which include;
+      </p>
+      <ul>
+        <li>90° field of view for multidirectional object detection</li>
+        <li>Increased sensor range up to 600cm</li>
+        <li>GPS tracking</li>
+        <li>3D route tracing with time, speed and location stamps for improved research and investigative purposes</li>
+      </ul>
+      <h2>Route Tracing Example</h2>
+      <p>
+        Here is visualization of 
+      </p>
+    </div>
+
+  </div>
+    <!-- End Prototype -->
+
+  
 
         <!-- Start Credits -->
         <div class="flex-row">
