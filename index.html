@@ -64,29 +64,30 @@
     <!-- End Header -->
      
     <div class="flex-item flex-column">
- 
-        <h2>PROBLEM STATEMENT</h2>
-        <p>
-          Individuals with visual impairments often face significant challenges in independently navigating their environments. 
-          While some assistive technologies exist, they tend to offer limited feedback about dynamic surroundings and often 
-          fail to provide real-time information about nearby obstacles. This lack of awareness can lead to accidents, increased 
-          dependence on others, and a reduced sense of confidence and mobility.
-        </p>
-        <p>
-          We believe that people with visual impairments deserve the freedom to move safely and independently, with greater 
-          control over their immediate environment.
-        </p>
+      <h2>PROBLEM STATEMENT</h2>
+      <hr>
+      <p>
+        Individuals with visual impairments often face significant challenges in independently navigating their environments. 
+        While some assistive technologies exist, they tend to offer limited feedback about dynamic surroundings and often 
+        fail to provide real-time information about nearby obstacles. This lack of awareness can lead to accidents, increased 
+        dependence on others, and a reduced sense of confidence and mobility.
+      </p>
+      <p>
+        We believe that people with visual impairments deserve the freedom to move safely and independently, with greater 
+        control over their immediate environment.
+      </p>
     </div>
 
     <div class="flex-item flex-column">
-        <h2>SOLUTION</h2>
-        <p>
-          We propose the development of a wearable assistive device that can be easily attached to an individual's clothing. 
-          Utilizing a combination of proximity and motion sensors, the device will detect obstacles in real-time and provide 
-          tactile feedback to the user. It will also assess the relative speed and distance of approaching obstacles, 
-          enabling the user to react accordingly. This system aims to enhance spatial awareness and mobility, empowering visually 
-          impaired individuals with greater independence and safety in their daily lives.
-        </p>
+      <h2>SOLUTION</h2>
+      <hr>
+      <p>
+        We propose the development of a wearable assistive device that can be easily attached to an individual's clothing. 
+        Utilizing a combination of proximity and motion sensors, the device will detect obstacles in real-time and provide 
+        tactile feedback to the user. It will also assess the relative speed and distance of approaching obstacles, 
+        enabling the user to react accordingly. This system aims to enhance spatial awareness and mobility, empowering visually 
+        impaired individuals with greater independence and safety in their daily lives.
+      </p>
     </div>
 
     <div class="content">
@@ -122,14 +123,15 @@
         </div>
         <!-- End Intro -->
     </div>
-    <div class="flex-item flex-column">
 
+    <div class="flex-item flex-column">
       <h2>SYSTEM OVERVIEW</h2>
       <hr>
-      <img class="image center" src="https://github.com/call-me-rodney/project-website-template/blob/0d32cd135b03318e5eac504736fa031308a703eb/img/schematic.png"></img>
+      <img class="image center" src="https://github.com/call-me-rodney/project-website-template/blob/0d32cd135b03318e5eac504736fa031308a703eb/img/schematic.png?raw=true"></img>
+      <p class="image-caption"><strong>Prototype Schematic Diagram</strong></p>
       <h3>Core Components</h3>
       <p>
-        A few key componebts that make up our system include:
+        A few key components that make up our system include:
       </p>
       <ul>
         <li>Arduino Uno</li>
@@ -156,21 +158,22 @@
       <h2><strong>Prototype Capabilities</strong></h2>
       <ul>
         <li>Object detection over a 30 degree field of view</li>
-        <li>Complementary sensor system for accurate proximity and speed data at both close and long range</li>
-        <li>Wearer speed and orientation tracking for purposes of fall detection and calculating relative speed</li>
-        <li>An array of vibration queues to convey incoming object speed and proximity</li>
+        <li>Complementary sensor system for accurate proximity and speed calculations at both close and long range.</li>
+        <li>Wearer speed and orientation tracking for purposes of detecting a fall and calculating relative speed between a user and an obstacle.</li>
+        <li>An array of vibration queues to convey incoming object speed and proximity. Basically, vibration strength to convey object proximity and pulse frequency to convey object speed.</li>
         <li>SMS Alerts to a victim's caretaker in the event that a fall has been detected.</li>
+        <li>Energy saving through power on/off states.</li>
       </ul>
       <h2>Protoype Limitations</h2>
       <p>
         While developing our protoype, we encountered a number of limitations and hurdles that made the development process challenging.
       </p>
       <ul>
-        <li>Narrow field of view, thus limited multidirectional object detection</li>
-        <li>Limited sensor range of just over 400 centimetres</li>
-        <li>Constant and accurate calibration of the gyroscope for accurate results</li>
-        <li>Small and ineffiecient power supply</li>
-        <li>SIM800L calibration and integration</li>
+        <li>Narrow field of view, thus limited multidirectional object detection.</li>
+        <li>Limited sensor range of just over 400 centimetres.</li>
+        <li>Constant and accurate calibration of the MPU6050 for accurate results.</li>
+        <li>System testing and code editing.</li>
+        <li>Finding a suitable power setup to efficiently power the SIM800L.</li>
       </ul>
     </div>
 
@@ -184,13 +187,15 @@
         <li>90° field of view for multidirectional object detection</li>
         <li>Increased sensor range up to 600cm</li>
         <li>GPS tracking</li>
+        <li>More powerful development board to handle the full load of our code's logic</li>
+        <li>Using a linear actuator for more concise haptic feedback</li>
         <li>3D route tracing with time, speed and location stamps for improved research and investigative purposes</li>
       </ul>
       <h2>Route Tracing Example</h2>
       <p>
         To give more context to the last concept stated above, below is a visualization of what we intend to do with the GPS, speed and gyroscope data collected from the device. This opens up new possibilities for fields such as forensics and data science
       </p>
-      <img class="image center" src="https://github.com/call-me-rodney/project-website-template/blob/069bc910d6e6b68cddf53d850f7314856ffb3dba/img/routetrace2.jpg">
+      <img class="image center" src="https://github.com/call-me-rodney/project-website-template/blob/master/img/routetrace2.jpg?raw=true" alt="3D route tracing example">
     </div>
 
   </div>
